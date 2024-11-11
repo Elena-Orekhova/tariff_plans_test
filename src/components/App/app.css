@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/bebasneuecyrillic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.app {
+  display: block;
+}
+
+.footer {
+  height: 107px;
+}
+
+@media (max-width: 768px) {  
+  .footer {
+    height: 20px;
+  }
+}

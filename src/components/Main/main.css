@@ -1,0 +1,157 @@
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.main-header {
+  margin: 27px 0 98px 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+
+.main-block {
+  display: flex;
+  gap: 79px;
+}
+
+.main-block-image__image-menu-price {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.main-block-menu__menu-price {
+  width: 100%;
+}
+
+.main-block-section__section-information {
+  text-align: left;
+}
+
+.main-block-text__text-information {
+  margin: 13px 0 26px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.main-block-checkbox__checkbox-offer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px minmax(200px, 450px);
+  gap: 12px;
+  color: var(--text-color-inform);
+  font-size: 16px;
+  line-height: 17.6px;
+  cursor: pointer;
+}
+
+.checkbox-offer__checkbox:checked + .checkbox-offer__pseudo-checkbox::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/check.svg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+.checkbox-offer__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 20%;
+  background: var(--color-blue);
+  background-size: 100%;
+}
+
+.checkbox-offer__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17.6px;
+  text-align: left;
+}
+
+.main-block-button__button-agreement {
+  width: 281px;
+  height: 76px;
+  margin: 50px 0 30px;
+  border: none;
+  border-radius: 40px;
+  color: var(--text-color-white);
+  font-size: 20px;
+  text-transform: uppercase;
+  background: var(--button-color);
+  animation: blink 1.5s infinite;
+  cursor: pointer;
+}
+
+.main-block-text__text-agreement {
+  margin: 0;
+  color: var(--text-color-inform);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.2px;
+}
+
+@media (max-width: 1150px) {
+  .main {
+    max-width: 1100px;
+    padding: 0 20px;
+  }
+
+  .main-block {
+    gap: 10px;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .main {
+    max-width: 768px;
+  }
+  
+  .main-header {
+    margin: 20px;
+    font-size: 24px;
+    line-height: 26.4px;
+    text-align: left;
+  }
+  
+  .main-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-block-text__text-information {
+    margin: 13px 51px 36px 0;
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  
+  .main-block-button__button-agreement {
+    width: 100%;
+    margin: 22px 0 0;
+  }
+  
+  .main-block-text__text-agreement {
+    display: none;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 60%;
+  }
+}
+

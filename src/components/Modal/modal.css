@@ -1,0 +1,180 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  flex: 1 1 auto;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background-color: var(--bg-color-modal);
+}
+
+.modal-visible {
+  display: flex;
+}
+
+.modal-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-height: max-content;
+  padding: 0 40px 40px;
+  font-family: 'PTRootUIWebRegular', sans-serif;
+  background-color: var(--bg-color-main);
+}
+
+.modal__modal-sticker {
+  display: inline-block;
+  align-self: start;
+  margin: 0 0 0 2px;
+  padding: 4px 10px 6px;
+  color: var(--text-color-white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0.02em;
+  background: var(--color-blue);
+}
+
+.modal__modal-closes {
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-image: url(./images/close.svg);
+  cursor: pointer;
+}
+
+.modal__modal-title {
+  margin: 30px 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+
+.wrapper__wrapper-modal-title {
+  color: var(--color-blue);
+}
+
+.modal__modal-motivation-text {
+  margin: 0 0 8px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31.2px;
+}
+
+.modal__modal-motivation-text_fat {
+  font-weight: 700;
+}
+
+.modal__modal-sale-text {
+  width: max-content;
+  margin: 0 auto 40px;
+  border: var(--color-blue) 1.5px solid;
+  border-radius: 30px;
+  padding: 12px 28px 16px 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31.2px;
+}
+
+.modal__modal-sale-text_blue {
+  color: var(--color-blue);
+}
+
+.modal__modal-offer-text {
+  margin: 0 0 20px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31.2px;
+  text-align: left;
+}
+
+.modal__modal-button {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: max-content;
+  margin: 0 auto;
+  border: none;
+  border-radius: 30px;
+  padding: 20px 42px 22px;
+  color: var(--text-color-white);
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  background: var(--button-color);
+  animation: blink 1.5s infinite;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+    padding: 0 20px 20px;
+  }
+  
+  .modal__modal-sticker {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  
+  .modal__modal-closes {
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .modal__modal-title {
+    margin: 22px 45px;
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+  
+  .modal__modal-motivation-text {
+    font-size: 15px;
+    line-height: 19.5px;
+  }
+  
+  .modal__modal-sale-text {
+    margin: 0 auto 26px;
+    padding: 12px 22px 14px 24px;
+    font-size: 15px;
+    line-height: 19.5px;
+  }
+  
+  .modal__modal-offer-text {
+    margin: 0 0 14px;
+    font-size: 15px;
+    line-height: 19.5px;
+  }
+  
+  .modal__modal-button {
+    padding: 20px 35px 22px;;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal__modal-sale-text {
+    width: 90%;
+  }
+
+  .modal__modal-button {
+    width: 90%;
+  }
+}

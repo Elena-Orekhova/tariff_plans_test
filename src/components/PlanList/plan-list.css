@@ -1,0 +1,63 @@
+.main-block-section__section-prace {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 12px;
+}
+
+.weekly-price::after {
+  content: '-30%';
+}
+
+.monthly-price::after {
+  content: '-40%';
+}
+
+.three-months-price::after {
+  content: '-50%';
+}
+
+.grid-forever {
+  display: grid;
+  grid-template-columns: min-content 142px 1fr;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 23px 0 0 31px;
+}
+
+.forever-price::after {
+  content: '-70%';
+}
+
+.active {
+  border: var(--color-blue) 2px solid;
+  background: var(--bg-color-blue);
+}
+
+@media (max-width: 1150px) {
+  .grid-forever {
+    display: flex;
+    padding: 0;
+  }
+
+  .main-block-section__section-prace {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-block-section__section-prace {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid-forever {
+    display: grid;
+    grid-template-columns: min-content 142px 1fr;
+    gap: 50px;
+    margin: 0;
+    padding: 21px 0 0 31px;
+  }
+}

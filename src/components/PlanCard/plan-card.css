@@ -1,0 +1,225 @@
+.section-menu__menu-price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 calc(100% / 3 - 12px * 2);
+  max-width: 100%;
+  border: var(--border-color-grey) 2px solid;
+  border-radius: 30px;
+  background: var(--bg-color-white);
+  cursor: pointer;
+}
+
+.section-menu__menu-price::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  opacity: 1;
+  color: var(--text-color-white);
+  font-size: 1rem;
+  background-image: url('./images/star.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity 1s ease, transform 0.5s ease;
+  transform: translateY(0);
+}
+
+.section-menu__menu-price.hidden-after::after {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.header__header-period {
+  margin: 45px 0 21px 31px;
+  color: var(--text-color-title);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.forever-plan {
+  align-self: start;
+  margin: 18px 0 0;
+  color: var( --text-color-main);
+  font-size: 38px;
+  line-height: 38px;
+}
+
+.menu-price__container-price {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.header__header-price_price-discount {
+  position: relative;
+  margin: 0;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 55px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+.price-changing {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.header__header-price_price-discount.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header__header-price_price-full {
+  margin: 0;
+  opacity: 1;
+  color: var(--text-color-price);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 26.4px;
+  text-align: right;
+  text-decoration: line-through;
+  transition: opacity 1s ease, transform 0.5s ease;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.text__text-price {
+  margin: 18px 30px 26px;
+  color: var(--text-color-price-inform);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.8px;
+  text-align: center;
+}
+
+.forever-plan-text {
+  text-align: left;
+}
+
+@media (max-width: 1150px) {
+  .section-menu__menu-price {
+    flex-wrap: wrap;
+  }
+
+  .forever-plan {
+    margin: 45px 0 21px 31px;
+  }
+
+  .forever-plan-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-menu__menu-price {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    gap: 10px 50px;
+    padding: 36px 87px 26px 34px;
+  }
+
+  .section-menu__menu-price::after {
+    top: 5px;
+    right: 10px;    
+    width: 50px;
+    height: 50px;
+  }
+  
+  .header__header-period {
+    margin: 0;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .menu-price__container-price {
+    margin: 0 0;
+  }
+
+  .header__header-price_price-discount {
+    font-size: 44px;
+    line-height: 48.4px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .header__header-price_price-full {
+    font-size: 20px;
+    line-height: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .text__text-price {
+    width: 100px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 18.2px;
+    text-align: left;
+  }
+
+  .forever-plan {
+    margin: 0;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-menu__menu-price {
+    display: grid;
+    grid-template-areas:
+      "period       price"
+      "text-price   price";
+    justify-content: space-between;
+    gap: 10px;
+    padding: 24px 63px 18px 20px;
+  }
+
+  .header__header-period {
+    grid-area: period;
+    justify-self: start;
+  }
+
+  .menu-price__container-price {
+    grid-area: price;
+  }
+
+  .text__text-price {
+    grid-area: text-price;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,23 @@
+:root {
+  --bg-color-main: #F5F7F7;
+  --bg-color-white: #FFFFFF;
+  --bg-color-blue: rgba(1, 185, 197, 0.05);
+  --bg-color-modal: rgba(0, 0, 0, 0.4);
+
+  --text-color-main: #2D3242;
+  --text-color-price: #95979F;
+  --text-color-title: #687078;
+  --text-color-inform: #818798;
+  --text-color-price-inform: #2F4353;
+
+  --text-color-white: #FFFFFF;
+  --text-color-link: #2D97F9;
+
+  --timer-color-grey: #818798;
+
+  --button-color: #FD4D35;
+  --color-blue: #01B9C5;
+  --timer-color-red: #FD4D35;
+
+  --border-color-grey: #D3D6DD;
+}

@@ -1,0 +1,160 @@
+
+.modal__modal-label {
+  font-family: 'PTRootUIWebRegular', sans-serif;
+  cursor: pointer;
+}
+
+.modal__modal-radio {
+  display: none;
+}
+
+.modal__modal-radio:checked + .modal__modal-radio_pseudo-radio::after {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: var(--color-blue) 1px solid;
+  border-radius: 50%;
+  background: 
+  radial-gradient(circle, 
+    var(--color-blue) 5px,
+    var(--bg-color-white) 5px,
+    var(--bg-color-white) 10px
+  );
+}
+
+.modal__modal-radio_pseudo-radio {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border: var(--text-color-main) 1px solid;
+  border-radius: 50%;
+  background: var(--bg-color-white);
+}
+
+.modal__modal-card {
+  text-align: left;
+}
+
+.modal__modal-card_card-title {
+  margin: 0 0 12px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.modal__modal-price {
+  font-weight: 700;
+}
+
+.modal__modal-price_price-full {
+  margin: 0 0 16px;
+  color: var(--text-color-title);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.modal__modal-price_price-full::before {
+  content: '';
+  position: relative;
+  top: 12px;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--button-color);
+  transform: rotate(18.1deg);
+}
+
+.modal__modal-price_price-full::after {
+  content: '';
+  position: relative;
+  top: -12px;
+  display: block;
+  width: 60px;
+  height: 2px;
+  font-weight: 500;
+  font-size: 13.33px;
+  line-height: 17.33px;
+  text-align: left;
+  background-color: var(--button-color);
+  transform: rotate(-18.1deg);
+}
+
+.modal__modal-price_price-discount {
+  position: relative;
+  width: min-content;
+  margin: 0 51px 0 0;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 50.6px;
+  text-align: left;
+}
+
+.modal__modal-price_price-discount::after {
+  content: '';
+  position: absolute;
+  top: -25px;
+  right: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: var(--text-color-white);
+  font-family: 'PTRootUIWebRegular', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  font-size: 13.33px;
+  line-height: 17.33px;
+  background-image: url('./images/star.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal__modal-separator {
+  margin: 0 10px 40px 24px;
+  opacity: 40%;
+}
+
+.active {
+  border: var(--color-blue) 2px solid;
+  background: var(--bg-color-blue);
+}
+
+.weekly-price-modal::after {
+  content: '-40%';
+}
+
+.monthly-price-modal::after {
+  content: '-50%';
+}
+
+.three-months-price-modal::after {
+  content: '-60%';
+}
+
+@media (max-width: 768px) {
+  .modal__modal-separator {
+    display: none;
+  }
+
+  .modal__modal-price_price-full {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+  }
+
+  .modal__modal-price_price-discount::after {
+    top: -15px;
+    right: -60px;
+  }
+}
