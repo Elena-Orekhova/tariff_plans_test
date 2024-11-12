@@ -17,5 +17,5 @@
 ## Макет: 
 https://www.figma.com/design/9XgWK3p8hV7kGaeNbVqnpm/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-Frontend?node-id=1-298&node-type=frame&t=VqPn7qrSwHZ8Qsdt-0
 
-## ССылка на проект:
-[vast-religion.surge.sh] (https://vast-religion.surge.sh/)
+## Ссылка на проект:
+https://vast-religion.surge.sh/
